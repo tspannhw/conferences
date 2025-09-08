@@ -4,14 +4,13 @@ CREATE OR REPLACE ICEBERG TABLE traveladvisories (
   title VARCHAR,
   link VARCHAR,
   description VARCHAR,
-  published DATE,
+  published VARCHAR,
   author VARCHAR,
   category VARCHAR
 )
 EXTERNAL_VOLUME = 'TRANSCOM_TSPANNICEBERG_EXTVOL'
 CATALOG = 'SNOWFLAKE'
 BASE_LOCATION = 'traveladvisories/';
- 
 PARTITION BY (category);
 
 
