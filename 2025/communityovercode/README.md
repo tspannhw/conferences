@@ -54,3 +54,12 @@ create or replace ICEBERG TABLE DEMO.DEMO.AQ (
 * https://github.com/tspannhw/airqualitydata
 * https://github.com/tspannhw/mta-snowpipe-streaming
 * https://github.com/tspannhw/TrafficAI
+* https://github.com/tspannhw/TrafficAI/blob/main/trafficai2.md
+
+
+
+
+
+
+![ApacheNiFi](https://private-user-images.githubusercontent.com/18673814/454066290-1dae718f-1c8f-449e-bbc4-9bf6d84474df.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTczNDY3MDcsIm5iZiI6MTc1NzM0NjQwNywicGF0aCI6Ii8xODY3MzgxNC80NTQwNjYyOTAtMWRhZTcxOGYtMWM4Zi00NDllLWJiYzQtOWJmNmQ4NDQ3NGRmLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwOTA4VDE1NDY0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ3YWU3Y2NiY2MyMGMxMzU0ODQyZjZmMTcwNDFkYTljMDM3Mzc1ZjdiZTNjNTRkOTZmNmRlZjhiOGE5MmViNjImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Rh-7SrEb9ZjWE5i7kVUYctdj2163jKkNVwiWzTCBcPM)
+
