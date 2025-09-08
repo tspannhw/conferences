@@ -36,6 +36,59 @@ create or replace ICEBERG TABLE DEMO.DEMO.AQ (
  BASE_LOCATION = 'airquality/';
 
 
+CREATE OR REPLACE ICEBERG TABLE SENSORS
+(
+    uuid           VARCHAR,
+    amplitude100   FLOAT,
+    amplitude500   FLOAT,
+    amplitude1000  FLOAT,
+    lownoise       FLOAT,
+    midnoise       FLOAT,
+    highnoise      FLOAT,
+    amps           FLOAT,
+    ipaddress      VARCHAR,
+    host           VARCHAR,
+    host_name      VARCHAR,
+    macaddress     VARCHAR,
+    systemtime     TIMESTAMP_LTZ,
+    endtime        FLOAT,
+    runtime        FLOAT,
+    starttime      TIMESTAMP_NTZ,
+    cpu            FLOAT,
+    cpu_temp       VARCHAR,
+    diskusage      VARCHAR,
+    memory         FLOAT,
+    id             VARCHAR,
+    temperature    VARCHAR,
+    adjtemp        VARCHAR,
+    adjtempf       VARCHAR,
+    temperaturef   VARCHAR,
+    pressure       FLOAT,
+    humidity       FLOAT,
+    lux            FLOAT,
+    proximity      INTEGER,
+    oxidising      FLOAT,
+    reducing       FLOAT,
+    nh3            FLOAT,
+    gasKO          VARCHAR,
+    pm25           INTEGER,
+    pm1            INTEGER,
+    pm10           INTEGER,
+    pm1atmos       INTEGER,
+    pm25atmos      INTEGER,
+    pm10atmos      INTEGER,
+    pmper1l03      INTEGER,
+    pmper1l05      INTEGER,
+    pmper1l1       INTEGER,
+    pmper1l25      INTEGER,
+    pmper1l5       INTEGER,
+    pmper1l10      INTEGER
+)
+EXTERNAL_VOLUME = 'TRANSCOM_TSPANNICEBERG_EXTVOL'
+CATALOG = 'SNOWFLAKE'
+BASE_LOCATION = 'sensors/';
+
+
 ````
 
 
