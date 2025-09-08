@@ -109,7 +109,10 @@ BASE_LOCATION = 'sensors/';
 * https://github.com/tspannhw/TrafficAI/blob/main/trafficai2.md
 
 
+### Data Sources
 
+* https://www.flightaware.com/adsb/stats/user/TimothySpann#stats-180330
+* https://console.streamnative.cloud/topic/dashboard
 
 
 
