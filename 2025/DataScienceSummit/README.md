@@ -47,6 +47,33 @@ END;
 ';
 
 
+
+select * from DEMO.DEMO.RAWNYCTRAFFICIMAGES
+where filename = 'trimg.96485b06-955a-42c5-a831-fe3e6a30e20f76866f53-b971-454c-b7ce-f1bf9818a66a.jpg';
+
+NYSDOT-4616417
+
+{
+  "infrastructure": {
+    "buildings": "Urban commercial/residential buildings lining the street",
+    "crosswalks": "Zebra striped pedestrian crossings visible",
+    "flags": "American flags visible on buildings",
+    "sidewalks": "Wide sidewalks with pedestrian activity"
+  },
+  "location": "Facing South Red",
+  "pedestrians": "Multiple people visible on sidewalks and crosswalks",
+  "scene_description": "Urban intersection with heavy traffic congestion",
+  "timestamp": "Nov 12 2025 01:55:51 PM",
+  "traffic_conditions": "Heavy congestion with vehicles stopped or moving slowly",
+  "traffic_flow": "Vehicles appear to be in stop-and-go traffic pattern",
+  "vehicles": {
+    "buses": "Multiple city buses visible, including yellow and white buses",
+    "cars": "Several passenger vehicles including dark colored sedans and SUVs",
+    "trucks": "Commercial vehicles present in traffic"
+  },
+  "weather_lighting": "Overcast conditions with daylight visibility"
+}
+
 ````
 
 
