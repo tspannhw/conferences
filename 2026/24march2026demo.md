@@ -36,8 +36,8 @@
 |  |  TABLES / FACTS / DIMENSIONS         |  |  ON <column> / ATTRIBUTES        |   |
 |  |                                      |  |  TARGET_LAG / WAREHOUSE          |   |
 |  |  PLANS_SEMANTIC_VIEW                 |  |                                  |   |
-|  |  ACTIVITY_SEMANTIC_VIEW              |  |  KB_SEARCH                  |   |
-|  |  SUPPORT_SEMANTIC_VIEW               |  |  TICKET_SEARCH              |   |
+|  |  ACTIVITY_SEMANTIC_VIEW              |  |  KB_SEARCH                       |   |
+|  |  SUPPORT_SEMANTIC_VIEW               |  |  TICKET_SEARCH                   |   |
 |  +--------------------------------------+  +----------------------------------+   |
 +===================================================================================+
                 |                           |
@@ -45,7 +45,7 @@
 +===================================================================================+
 |                          SNOWFLAKE DATA LAYER                                     |
 |                                                                                   |
-|  _RETIREMENT   _PARTICIPANT   SUPPORT   KNOWLEDGE               |
+|  _RETIREMENT   _PARTICIPANT   SUPPORT   KNOWLEDGE                                 |
 |  _PLANS (10)       _ACTIVITY (15)     _TICKETS (8)   _BASE (8)                    |
 |                                                                                   |
 |  + 225 existing tables, 35+ semantic views, 11 search services, 18 agents         |
