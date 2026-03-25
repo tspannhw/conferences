@@ -159,34 +159,34 @@ Semantic Views define **business meaning** over physical tables using the
 -- Correct Snowflake semantic view syntax:
 CREATE OR REPLACE SEMANTIC VIEW DEMO.DEMO.PLANS_SEMANTIC_VIEW
   TABLES (
-    DEMO.DEMO.VOYA_RETIREMENT_PLANS
-      COMMENT='Voya retirement plan data including assets and participants'
+    DEMO.DEMO.RETIREMENT_PLANS
+      COMMENT=' retirement plan data including assets and participants'
   )
   FACTS (
-    VOYA_RETIREMENT_PLANS.TOTAL_ASSETS AS TOTAL_ASSETS
+    RETIREMENT_PLANS.TOTAL_ASSETS AS TOTAL_ASSETS
       COMMENT='Total assets under management in USD',
-    VOYA_RETIREMENT_PLANS.PARTICIPANT_COUNT AS PARTICIPANT_COUNT
+    ETIREMENT_PLANS.PARTICIPANT_COUNT AS PARTICIPANT_COUNT
       COMMENT='Number of active participants',
-    VOYA_RETIREMENT_PLANS.AVG_BALANCE AS AVG_BALANCE
+    RETIREMENT_PLANS.AVG_BALANCE AS AVG_BALANCE
       COMMENT='Average participant balance in USD'
   )
   DIMENSIONS (
-    VOYA_RETIREMENT_PLANS.PLAN_ID AS PLAN_ID
+    RETIREMENT_PLANS.PLAN_ID AS PLAN_ID
       COMMENT='Unique plan identifier',
-    VOYA_RETIREMENT_PLANS.PLAN_NAME AS PLAN_NAME
+    RETIREMENT_PLANS.PLAN_NAME AS PLAN_NAME
       COMMENT='Full plan name',
-    VOYA_RETIREMENT_PLANS.PLAN_TYPE AS PLAN_TYPE
+    RETIREMENT_PLANS.PLAN_TYPE AS PLAN_TYPE
       COMMENT='Type: 401K, 403B, HSA, IRA, 457B, PENSION',
-    VOYA_RETIREMENT_PLANS.EMPLOYER_NAME AS EMPLOYER_NAME
+    RETIREMENT_PLANS.EMPLOYER_NAME AS EMPLOYER_NAME
       COMMENT='Sponsoring employer',
-    VOYA_RETIREMENT_PLANS.PLAN_STATUS AS PLAN_STATUS
+    RETIREMENT_PLANS.PLAN_STATUS AS PLAN_STATUS
       COMMENT='Active or Inactive',
-    VOYA_RETIREMENT_PLANS.STATE AS STATE
+    RETIREMENT_PLANS.STATE AS STATE
       COMMENT='US state',
-    VOYA_RETIREMENT_PLANS.INCEPTION_DATE AS INCEPTION_DATE
+    RETIREMENT_PLANS.INCEPTION_DATE AS INCEPTION_DATE
       COMMENT='Plan start date'
   )
-  COMMENT='Semantic model for Voya retirement plan analytics';
+  COMMENT='Semantic model for retirement plan analytics';
 ```
 
 ---
@@ -327,7 +327,7 @@ Agents **automatically route** questions to the right tool:
 
 ---
 
-## Creating the Voya Agent
+## Creating the Agent
 
 ```sql
 -- Correct agent creation syntax:
@@ -341,21 +341,21 @@ FROM SPECIFICATION $$
   },
   "tools": [
     {"tool_spec": {"type": "cortex_analyst_text_to_sql",
-                   "name": "voya_plans_analyst",
+                   "name": "plans_analyst",
                    "description": "Query retirement plan data"}},
     {"tool_spec": {"type": "cortex_analyst_text_to_sql",
-                   "name": "voya_activity_analyst",
+                   "name": "activity_analyst",
                    "description": "Query participant transactions"}},
     {"tool_spec": {"type": "cortex_search",
-                   "name": "voya_kb_search",
+                   "name": "kb_search",
                    "description": "Search knowledge base"}}
   ],
   "tool_resources": {
-    "voya_plans_analyst": {
+    "plans_analyst": {
       "semantic_view": "DEMO.DEMO.PLANS_SEMANTIC_VIEW"},
-    "voya_activity_analyst": {
+    "activity_analyst": {
       "semantic_view": "DEMO.DEMO.ACTIVITY_SEMANTIC_VIEW"},
-    "voya_kb_search": {
+    "kb_search": {
       "cortex_search_service": "DEMO.DEMO.KB_SEARCH"}
   }
 }
